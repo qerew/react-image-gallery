@@ -10,10 +10,11 @@
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.11"
   },
+  "main": "server.js",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
