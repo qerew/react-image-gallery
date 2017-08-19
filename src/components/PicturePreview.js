@@ -5,9 +5,14 @@ class PicturePreview extends React.Component {
   render () {
     return (
       <div className="picture-preview">
-        <a href={this.props.pic.url}>
-          <img className="thumbnail" src={this.props.pic.url} alt="thumbnail"/>
-        </a>
+        <img className="thumbnail"
+          src={this.props.pic.url}
+          alt="thumbnail"
+          onClick={(e) => this.props.openModal(this.props.pic.url, e)}
+        />
+        <p>
+          <a className="full-size" href={this.props.pic.url}>Full Size</a>
+        </p>
       </div>
     );
   }
@@ -15,6 +20,7 @@ class PicturePreview extends React.Component {
 
 PicturePreview.propTypes = {
   pic: PropTypes.object.isRequired,
+  openModal: PropTypes.func.isRequired
 };
 
 export default PicturePreview;
