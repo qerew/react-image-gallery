@@ -10,9 +10,6 @@ class PicturePreview extends React.Component {
           alt="thumbnail"
           onClick={(e) => this.props.openModal(this.props.pic.url, e)}
         />
-        <p>
-          <a className="full-size" href={this.props.pic.url}>Full Size</a>
-        </p>
       </div>
     );
   }

@@ -125,14 +125,51 @@ input {
 }
 
 .gallery {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
 }
 
-.full-size {
+.gallery-view {
+  margin-left: 48%;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+
+.gallery-view > ul{
+  display: flex;
+  font-size: 2em;
+  list-style: none;
   color: #2c3e50;
+}
+
+.gallery-view button:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.current-picture {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.current-picture img {
+  width: 100%;
+  border: 3px solid #2c3e50;
+}
+
+.thumbnail-list {
+  margin: 0 auto;
+}
+
+.thumbnail-list img {
+  width: 48px;
+}
+
+.thumbnail-bar {
+  display: flex;
+}
+
+.active-button {
+  background: #2c3e50;
+  color: white;
 }
 
 /* MODAL OVELAY */
@@ -163,6 +200,9 @@ input {
 
 .modal-close {
  position: absolute;
+ background-color: transparent;
+ border: none;
+ color: white;
  top: 0;
  right: 8px;
  font-size: 1.5rem;
@@ -175,6 +215,29 @@ input {
 
 /* MEDIA QUERIES */
 
+@media screen and (min-width: 500px) {
+  .picture-preview {
+    width: 40%;
+  }
+
+  .gallery-view {
+    margin-left: 76%;
+  }
+
+  .header {
+    font-size: 1.1em;
+  }
+
+  .thumbnail {
+    padding-bottom: 0;
+    pointer-events: auto;
+  }
+
+  .current-picture {
+    width: 50%;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .header p {
     width: 20%;
@@ -184,28 +247,11 @@ input {
   .links {
     right: 15%;
   }
-}
 
-@media screen and (min-width: 500px) {
-  .picture-preview {
-    width: 40%;
+  .thumbnail-list img {
+    width: 75px;
   }
 
-  .header {
-    font-size: 1.1em;
-  }
-
-  .full-size {
-    display: none;
-  }
-
-  .thumbnail {
-    padding-bottom: 0;
-    pointer-events: auto;
-  }
-}
-
-@media screen and (min-width: 900px) {
   .picture-preview {
     width: 30%;
   }
@@ -215,7 +261,7 @@ input {
   }
 }
 
-@media screen and (min-widtH: 1200px) {
+@media screen and (min-width: 1200px) {
   .picture-preview {
     width: 20%;
   }

@@ -9,7 +9,7 @@ class Modal extends React.Component {
     return(
       <div  className='modal-overlay' onClick={this.props.onClick} >
         <div className='modal-body'>
-          <a className='modal-close' href='#' onClick={this.props.onClick}><span className='fa fa-times'></span></a>
+          <button className='modal-close' onClick={this.props.onClick}><span className='fa fa-times'></span></button>
           <img src={this.props.src} alt="Full size"/>
         </div>
       </div>
