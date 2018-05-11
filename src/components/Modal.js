@@ -1,16 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import React from "react";
 
 class Modal extends React.Component {
-  render () {
-    if (this.props.isOpen === false) {
+  render() {
+    const { isOpen, onClick, src } = this.props;
+
+    if (!isOpen) {
       return null;
     }
-    return(
-      <div  className='modal-overlay' onClick={this.props.onClick} >
-        <div className='modal-body'>
-          <button className='modal-close' onClick={this.props.onClick}><span className='fa fa-times'></span></button>
-          <img src={this.props.src} alt="Full size"/>
+    return (
+      <div className="modal-overlay" onClick={onClick}>
+        <div className="modal-body">
+          <button className="modal-close" onClick={onClick}>
+            <span className="fa fa-times" />
+          </button>
+          <img src={src} alt="Full size" />
         </div>
       </div>
     );

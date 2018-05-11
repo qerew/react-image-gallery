@@ -1,13 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import React from "react";
 
 class Picture extends React.Component {
-
-  render () {
+  render() {
     return (
       <div className="picture">
-        <input onChange={this.props.speed} type="range" min="1" max="5" defaultValue="3"></input>
-        <img src={require('../images/1.jpg')} alt=''/>
+        <input
+          id="speed"
+          onChange={this.props.speed}
+          type="range"
+          min="1"
+          max="5"
+          defaultValue="3"
+        />
+        <img src={require("../images/1.jpg")} alt="" />
       </div>
     );
   }
